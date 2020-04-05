@@ -32,6 +32,8 @@ Tom Mitchell :一个计算机程序能够从经验E中，解决任务T，达到�
 
 单变量线性回归假设函数：$h_\theta(x) = \theta_0 + \theta_1x$。对于给定的$\theta$，$h_\theta(x)$为$x$的函数。
 
+这里的假设函数都可以写为：$prediction = datamatrix * parameters$
+
 #### 2.2 代价函数
 
 代价函数（Cost Function）：如何去选择$\theta$？
@@ -72,6 +74,16 @@ $\alpha$是学习率（Learning rate），决定沿着能让代价函数下降�
 ![Gradient descent](Img/../../../Img/GD-3.png)
 
 在批量梯度下降中，每一次都同时让所有的参数减去学习速率乘以代价函数的导数。在梯度更新过程中，所有的参数必须同时更新，每一步计算的$J(\theta)$都是关于所有$\theta$的函数，如果异步更新会导致每次计算的$J(\theta)$发生变化。
+
+对于单变量线性回归、均方误差代价函数，应用梯度下降算法：
+
+![linear regression gradient descent](Img/../../../Img/L-Gd.png)
+
+同步更新所有参数：
+
+![linear regression gradient descent](Img/../../../Img/l-gd-2.png)
+
+该算法为**批量梯度下降**，即在梯度下降的每一步中，都用到了所有样本，在最后计算过程中需要对m个训练样本进行求平均。
 
 ### 三、多变量线性回归(Linear Regression)
 
