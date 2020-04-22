@@ -1,5 +1,7 @@
 ## 吴恩达机器学习作业
 
+感谢大神: **黄海光 haiguang2000@qq.com**提供的Python版编程作业
+
 **作业汇总:**
 
 [Programming Exercise(代码作业)](Code/../Programming%20Exercise.pdf)
