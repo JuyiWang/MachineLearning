@@ -135,6 +135,7 @@ K-Means 算法是一种迭代算法：
          μk := average (mean) of points assigned to cluster k
 
       }
+      
 K-Means 算法也可以很便利地用于将数据分为许多不同组，即使在没有非常明显区分的组群的情况下也可以。
 
 #### 11.3 优化目标
