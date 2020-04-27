@@ -22,6 +22,8 @@
 
 *3. Gradient Descent*
 
+原理基础：***Taylor Series 泰勒展开式***
+
 **3. Smooth function**
 
 ***Regularization*** 可避免过拟合（Overfitting） $L(\theta) = J(\theta) + \lambda \sum (\theta)^2$
@@ -32,4 +34,12 @@
 
 ***Gradient*** 的方向为 loss 等高线的法线方向。
 
-## Regression
+## Regression & Classification
+
+**4. 自适应学习率算法**
+
+**5. Generative Vs Discriminative**
+
+**6. Logistic Regression**
+
+**7. CrossEntropy**
