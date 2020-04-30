@@ -38,8 +38,36 @@
 
 **4. 自适应学习率算法**
 
+见下章~
+
 **5. Generative Vs Discriminative**
+
+***Generative***
+
+![DL_16](DL_Img/DL_16.png)
+
+高斯分布计算先验概率，根据贝叶斯公式，假设各特征之间相互独立，计算后验概率。
+
+即通过贝叶斯计算所需的参数 $w$ 和 $b$。
+
+***Vs***
+
+![DL_17](DL_Img/DL_17.png)
+
+生成模型相比需要更少的数据，但是贝叶斯假设各个特征之间相互独立，但实际情况可能并不如此，因此生成式的效果可能不如区别式。
 
 **6. Logistic Regression**
 
-**7. CrossEntropy**
+![DL_13](DL_Img/DL_13.png)
+
+为什么不能用在逻辑回归中应用均方差（MSE）？
+
+![DL_14](DL_Img/DL_14.png)
+
+![DL_15](DL_Img/DL_15.png)
+
+MSE + Sigmoid 函数计算梯度时会导致梯度近似为0，无法有效收敛至局部最小值。
+
+***Limitation of Logistic Regression***
+
+逻辑回归的特征计算部分，可能找不到有效的transformation。
