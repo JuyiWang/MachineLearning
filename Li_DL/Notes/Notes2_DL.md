@@ -92,6 +92,16 @@ Back pass 的计算过程实际是应用链式求导法则计算计算反向梯�
 
 #### 3. Dropout
 
+***Dropout is a kind of ensemble.***
+
+![DL_18](DL_Img/DL_18.png)
+
+在训练过程中，每个节点有 $p \%$ 的概率被dropout。每次训练都近似于一个新的网络，每次被保留的节点，则实现了参数共享。
+
+![DL_19](DL_Img/DL_19.png)
+
+多次训练结束后，近似于训练了多个不同结构的网络，因此在测试过程中，要多对个不同结构的网络结果求平均值。因此在训练过程中，所有的参数要乘 $1-p\%$。
+
 ### Good Results on Testing Data ?
 
 #### 1. New activation function
@@ -100,13 +110,22 @@ Back pass 的计算过程实际是应用链式求导法则计算计算反向梯�
 
 ![DL_10](DL_Img/DL_10.png)
 
+Sigmoid函数将数值映射至$(0,1)$区间内。
+
 **ReLU**
 
 ![DL_11](DL_Img/DL_11.png)
 
+当 $z < 0$ 时，激活函数输出为0，梯度也为0，此时网络相当于一个删除部分节点的Thinner network。更新的节点不再有更小的梯度值。
+
 **Maxout**
 
 ![DL_12](DL_Img/DL_12.png)
+
+ReLU 是 Maxout 的一种特殊情况。
+
+***Activation function in maxout network can be any piecewise linear convex function***
+***How many pieces depending on how many elements in a group***
 
 #### 2. Adaptive Learning Rate
 
