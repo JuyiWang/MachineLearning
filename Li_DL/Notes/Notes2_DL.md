@@ -78,3 +78,42 @@ Back pass 的计算过程实际是应用链式求导法则计算计算反向梯�
 
 ## Tips for Deep Learning
 
+![DL-9](DL_Img/DL_9.png)
+
+***Do not always blame Overfitting.***
+
+深度神经网络中模型效果不佳可能是训练过程中效果不好 **（Underfitting）** 或者发生了过拟合 **（Overfitting）** 。
+
+### Good Results on Training Data ?
+
+#### 1. Early Stopping
+
+#### 2. Regularization
+
+#### 3. Dropout
+
+### Good Results on Testing Data ?
+
+#### 1. New activation function
+
+**Vanishing Gradient Problem**
+
+![DL_10](DL_Img/DL_10.png)
+
+**ReLU**
+
+![DL_11](DL_Img/DL_11.png)
+
+**Maxout**
+
+![DL_12](DL_Img/DL_12.png)
+
+#### 2. Adaptive Learning Rate
+
+**Adagrad**
+
+**RMSProp**
+
+**Momentum**
+
+**Adam**
