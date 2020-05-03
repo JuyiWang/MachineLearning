@@ -136,3 +136,9 @@ ReLU 是 Maxout 的一种特殊情况。
 **Momentum**
 
 **Adam**
+
+#### Tips for training
+
+**Sigmoid**
+
+**Normalization**
