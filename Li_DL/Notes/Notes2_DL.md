@@ -54,7 +54,7 @@ BP算法本质上还是Gradient Descent.
 
 $\frac{\partial C}{\partial w} = \frac{\partial z}{\partial w} \frac{\partial C}{\partial z}$
 
-**Forward psaa:** Compute $\frac{\partial z}{\partial w}$ for all **parameters**
+**Forward pass:** Compute $\frac{\partial z}{\partial w}$ for all **parameters**
  
 **Back pass:** Compute $\frac{\partial C}{\partial z}$ for all **activation function inputs z**
 
@@ -89,6 +89,8 @@ Back pass 的计算过程实际是应用链式求导法则计算计算反向梯�
 #### 1. Early Stopping
 
 #### 2. Regularization
+
+
 
 #### 3. Dropout
 
@@ -125,6 +127,7 @@ Sigmoid函数将数值映射至$(0,1)$区间内。
 ReLU 是 Maxout 的一种特殊情况。
 
 ***Activation function in maxout network can be any piecewise linear convex function***
+
 ***How many pieces depending on how many elements in a group***
 
 #### 2. Adaptive Learning Rate
