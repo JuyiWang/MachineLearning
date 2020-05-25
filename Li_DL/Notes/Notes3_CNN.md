@@ -1,27 +1,45 @@
-# Notes.3 CNN & GNN
+# Notes.3 CNN
 
 ## CNN
 
-**FCNN (Fully Connected Neural Network)** 含有太多的参数。
+### Why CNN ？
 
-**CNN (Convolution Neural Network)** 可以简化参数。每个神经元不需要计算输入全部特征,只需要查看部分特定的特征。
+- **Why CNN for Image ?**
+  - **Some patterns are much smaller than the whole image.**
+    - A neuron does not have to see the whole image discover the pattern.
+    - Connecting to small region with less parameters.
+  - **The small patterns appear in different regions.**
+    - Different part do almost the same thing,they can use the same set of parameters.
+  - **Subsampling the pixels will not change the object.**
+    - Less parameters for the network to process the image.
 
- ***CNN exaggerates what it sees***
+![DL_20](DL_Img/notes3/DL_20.png)
 
- CNN 简化参数：
-
-1. Filter
-
-1. Shared Weights
-
-### Convolution & Pooling
-
-#### Convolution
+### Convolution
 
 **卷积核(Filter)** 与输入特征值做内积（对应位相乘加和）。是CNN需要学习的参数。
 
-1*1 的卷积核 对输入特征进行线性变化。
+![DL_21](DL_Img/notes3/DL_21.png)
 
+每个卷积核（Filter-size：$n*n$）只和 $n*n$ 个输入相连接，而非与所有收入全连接。
+
+即**减少参数量**又实现**参数共享**。
+
+### Pooling
+
+**最大池化(Max Pooling)** 
+
+![DL_24](DL_Img/notes3/DL_24.png)
+
+![DL_22](DL_Img/notes3/DL_22.png)
+
+经过池化，可得到一个新的更小的图像。***Each filter is a channel,the number of the channel is the number of filters.***
+
+池化操作后，会丢失输入原有的位置信息。
+
+### Flatten
+
+![DL_23](DL_Img/notes3/DL_23.png)
 
 ## GNN
 
