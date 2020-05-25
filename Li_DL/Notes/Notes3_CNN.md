@@ -41,6 +41,8 @@
 
 ![DL_23](DL_Img/notes3/DL_23.png)
 
+### Application
+
 ## GNN
 
 GNN (Graph Neural Network)
