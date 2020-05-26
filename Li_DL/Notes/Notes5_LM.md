@@ -2,8 +2,6 @@
 
 ## Word Embedding
 
-
-
 ## Transformer
 
 ## ELMO
