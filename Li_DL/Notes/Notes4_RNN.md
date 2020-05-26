@@ -17,7 +17,7 @@
 | **Many to One** | Sequence | Vector | Classification |
 | **Many to Many** | Sequence | Sequence(much shorter than input) | Speech Recognition (CTC:Conectionist Tenpiral Classification)|
 | **Many to Many** | Sequence | Sequence(similar with input) | Machine Translation |
-| **Beyond Sequence** | Syntacitc Parsing | Sequence |  |
+| **Beyond Sequence** | Syntacitc Parsing | Sequence | Sentence Analysis |
 
 ### LSTM
 
@@ -35,15 +35,16 @@
 
 Simpler than LSTM
 
-### R/L/G Vs. H/C/S
+### RNN v.s. Structured Learning
 
 | RNN LSTM | HMM.CRF.Structure Perception.SVM|
 | --- | --- |
-|   |   |
+| Unidirectional RNN does not consider the whole sequence | Using Viterbi,so consider the whole sequence |
+| Cost and error not always related | Can explicitly consider the label dependency |
+| Deep | Cost is the upper bound of error |
 
 **Deep is better.**
 
 ***MLDS:Machine Learning and having it deep and structures***
 
-## Sequence to Sequence
 
