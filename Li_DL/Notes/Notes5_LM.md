@@ -6,9 +6,8 @@
 
 ![transformer](DL_Img/notes5/transformer.png)
 
-![transformer-sdpa](DL_Img/notes5/scaled%20dot-product%20att.png)
+![transformer-sdpa](DL_Img/notes5/attentino)
 
-![transformer-mha](DL_Img/notes5/multi-head%20attention.png)
 
 ![bert-elmo-gpt](DL_Img/notes5/bert-gpt-elmo.png)
 ## BERT
