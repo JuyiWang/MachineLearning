@@ -55,23 +55,59 @@ Use 0 to complete the input sequence to the fixed length.
 
 This masking, combined with fact that the output embeddings are offset by one position, ensures that the predictions for position $i$ can depend only on the known outputs at positions less than $i$.
 
-
-![bert-elmo-gpt](DL_Img/notes5/bert-gpt-elmo.png)
 ## BERT
+
+**B**idirectional **E**ncoder **R**epresentations from **T**ransformers. 
 
 ### Input Representations
 
 ![bert_embedding](DL_Img/notes5/bert-embed.png)
 
+**Tokens embedding** :
+
+Use WordPiece embeddings with a 30000 token vocabulary.
+
+**Segment embedding** :
+
+Use a learned embedding to every token indicating whether it belongs to sentence A or sentence B.
+
+**Position embedding** :
+
+Use learned position embedding to represent the position information.
+
 ### Pre-training
+
+#### Masked LM
+
+In order to train a deep bidirectional representation, simply mask some percentage of the input tokens at random, and then predict those masked tokens. In contrast to denoising auto-encoders, BERT only predict the masked words rather than recon-structing the entire input.
+
+![MLM](DL_Img/notes5/MLM.png)
+
+To mitigate the downside that we are creating a mismatch between pre-training and fine-tuning, since the [MASK] token does not appear during fine-tuning. 
+
+#### Next Sequence Prediction
+
+Specifically, when choosing the sentences A and B for each pre- training example, 50% of the time B is the actual next sentence that follows A (labeled as IsNext), and 50% of the time it is a random sentence from the corpus (labeled as NotNext). 
+
+![NSP](DL_Img/notes5/NSP.png)
 
 ### Fine-tuning
 
+BERT use self-attention machanism to catch the bidirectional cross attention between two sequence.
+
 ![bert-fine-tuning](DL_Img/notes5/bert-fine-tuning.png)
+
+- the sentence A and B from pretraining:
+    - Sentence pairs in paraphrasing
+    - Hypothesis-premise pairs in entailment
+    - Question-passage pairs in question answering
+    - A degenerate text-∅ pair in text classification or sequence tagging
 
 ## GPT
 
 ## ELMO
+
+![bert-elmo-gpt](DL_Img/notes5/bert-gpt-elmo.png)
 
 ## XLNet
 
