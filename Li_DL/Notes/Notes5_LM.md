@@ -1,10 +1,8 @@
 # Language Model
 
-## Word Embedding
-
 ## Transformer
 
-Transformer : seq2seq model with **'self-attention'**.
+Transformer : seq2seq model with **'self-attention'**.All of the ouput can be compute parallelly.
 
 RNN hard to parallel.
 
@@ -24,7 +22,13 @@ The stack of 6 identical layers, each layer has three sublayers, first is ***mul
 
 Employing a ***residual connection*** around each of the two sub-layers, folloed by layer normlization. $LayerNorm(x + Sublayer(x))$.
 
+**Layer Norm & Batch Norm** 
+
+Layer norm always use with RNN,regardless of the batch.
+
 ### Attention
+
+**Dynamic Conditional Generation**
 
 ![transformer-attn](DL_Img/notes5/attention.png)
 
@@ -42,6 +46,12 @@ Multi-head attention allows the model to jointly attend to information from diff
 
 $$MultiHead(Q, K, V) = Concat(head1, ..., head_h)W^O\\
 head_i = Attention(QW_i^Q, KW_i^K, VW_i^V,)$$
+
+### Position embedding
+
+input is $x_i$ and embedding is $W^I x_i = \alpha_i$,and position embedding is $W^P p_i = e_i$,the input embedding is $\alpha_i + e_i$.Two embedding is added but not concat.
+
+$[ W^I | W_P ] * concat(x_i, p_i) = concat(W^I, W^P) = \alpha_i + e_i$
 
 ### Position-wise Feed-forward networks
 
@@ -100,7 +110,6 @@ To mitigate the downside that we are creating a mismatch between pre-training an
 
 **Predict the masked word:** Setence with [MASK] → BERT model → Linear Multi-Class classifier($d_{vocab}$)
 
-
 #### Next Sequence Prediction
 
 Specifically, when choosing the sentences A and B for each pre-training example, 50% of the time B is the actual next sentence that follows A (labeled as IsNext), and 50% of the time it is a random sentence from the corpus (labeled as NotNext). 
@@ -113,9 +122,11 @@ Specifically, when choosing the sentences A and B for each pre-training example,
 **[CLS]** : Classification results
 **[SEP]** : Boundary of two sentences
 
-**Judge the sentence pair:** Sentence pair → BERT model → [CLS] → Linear-Binary Classifier → 0 or 1
+**Predict the sentence pair:** Sentence pair → BERT model → [CLS] → Linear-Binary Classifier → 0 or 1
 
-**Using simple classifier in MLM and NSP, ensure that the model has a strong learning ability**
+**Using simple classifier in MLM and NSP, ensure that the model has a strong learning ability.**
+
+**Both part used at the same time.**
 
 ### Fine-tuning
 
