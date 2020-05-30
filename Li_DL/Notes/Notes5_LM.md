@@ -4,6 +4,12 @@
 
 ## Transformer
 
+Transformer : seq2seq model with **'self-attention'**.
+
+RNN hard to parallel.
+
+CNN can parallel but small step,only higher layer can consider longer sequence.
+
 ![transformer](DL_Img/notes5/transformer.png)
 
 ### Encoder-Decoder
@@ -59,6 +65,9 @@ This masking, combined with fact that the output embeddings are offset by one po
 
 **B**idirectional **E**ncoder **R**epresentations from **T**ransformers. 
 
+Learned from a large amount of test without annotation.
+
+The bert use character feature not word character to learn the representation of sentence.Such as '葡萄' while be split to '葡' and '萄' to train the model.
 ### Input Representations
 
 ![bert_embedding](DL_Img/notes5/bert-embed.png)
@@ -81,15 +90,32 @@ Use learned position embedding to represent the position information.
 
 In order to train a deep bidirectional representation, simply mask some percentage of the input tokens at random, and then predict those masked tokens. In contrast to denoising auto-encoders, BERT only predict the masked words rather than recon-structing the entire input.
 
-![MLM](DL_Img/notes5/MLM.png)
+- 80% of the time: Replace the word with the [MASK] token, e.g., my dog is hairy → my dog is [MASK]
+- 10% of the time: Replace the word with a random word, e.g., my dog is hairy → my dog is apple
+- 10% of the time: Keep the word unchanged,e.g., my dog is hairy → my dog is hairy.
+
+The purpose of this is to bias the representation towards the actual observed word.
 
 To mitigate the downside that we are creating a mismatch between pre-training and fine-tuning, since the [MASK] token does not appear during fine-tuning. 
+
+**Predict the masked word:** Setence with [MASK] → BERT model → Linear Multi-Class classifier($d_{vocab}$)
+
 
 #### Next Sequence Prediction
 
 Specifically, when choosing the sentences A and B for each pre- training example, 50% of the time B is the actual next sentence that follows A (labeled as IsNext), and 50% of the time it is a random sentence from the corpus (labeled as NotNext). 
 
-![NSP](DL_Img/notes5/NSP.png)
+- Input: [CLS] the man went to [MASK] stores [SEP] he bought a gallon [MASK] milk [SEP]
+  Output: IsNext
+- Input: [CLS] the man went to [MASK] stores [SEP] penguin [MASK] are flight ##less birds [SEP]
+  Output: NotNext
+
+[CLS] : Classification results
+[SEP] : Boundary of two sentences
+
+**Judge the sentence pair:** Sentence pair → BERT model → [CLS] → Linear-Binary Classifier → 0 or 1
+
+**Using simple classifier in MLM and NSP, ensure that the model has a strong learning ability**
 
 ### Fine-tuning
 
@@ -97,11 +123,17 @@ BERT use self-attention machanism to catch the bidirectional cross attention bet
 
 ![bert-fine-tuning](DL_Img/notes5/bert-fine-tuning.png)
 
-- the sentence A and B from pretraining:
+- The sentence A and B from pretraining:
     - Sentence pairs in paraphrasing
     - Hypothesis-premise pairs in entailment
     - Question-passage pairs in question answering
     - A degenerate text-∅ pair in text classification or sequence tagging
+
+- **Downstream tasks**
+  - **Sentiment / Document Classification** : Fine-tune BERT → [CLS] → Linear classifier(Trained from scratch) → Class
+  - **Tagging / Slot filling** : Character → Fine-tune BERT → Linear Classifier → Class
+  - **Nature Language Inference** : Sentence pair → Fine-tune BERT → Linear Classifier → Class [T/F/UNK]
+  - **Extraction-Based QA** : Document(s) and Question(e) (s and e learned from scratch)→ Fine-tune BERT → Document representaion {$d_0, ... d_n$} → s and e dot product with $d_i$ → Answer {$d_s, ... d_e$} if s == e : No answer
 
 ## GPT
 
