@@ -141,10 +141,14 @@ BERT use self-attention machanism to catch the bidirectional cross attention bet
     - A degenerate text-∅ pair in text classification or sequence tagging
 
 - **Downstream tasks**
-  - **Sentiment / Document Classification** : Fine-tune BERT → [CLS] → Linear classifier(Trained from scratch) → Class
-  - **Tagging / Slot filling** : Character → Fine-tune BERT → Linear Classifier → Class
-  - **Nature Language Inference** : Sentence pair → Fine-tune BERT → Linear Classifier → Class [T/F/UNK]
-  - **Extraction-Based QA** : Document(s) and Question(e) (s and e learned from scratch)→ Fine-tune BERT → Document representaion {$d_0, ... d_n$} → s and e dot product with $d_i$ → Answer {$d_s, ... d_e$} if s != e else : No answer
+  - **Sentiment / Document Classification** 
+  Fine-tune BERT → [CLS] → Linear classifier(Trained from scratch) → Class
+  - **Tagging / Slot filling** 
+  Character → Fine-tune BERT → Linear Classifier → Class
+  - **Nature Language Inference** 
+  Sentence pair → Fine-tune BERT → Linear Classifier → Class [T/F/UNK]
+  - **Extraction-Based QA** 
+  Document(s) and Question(e) (s and e learned from scratch)→ Fine-tune BERT → Document representaion {$d_0, ... d_n$} → s and e dot product with $d_i$ → Answer {$d_s, ... d_e$} if s != e else : No answer
 
 ## GPT
 
