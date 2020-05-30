@@ -103,15 +103,15 @@ To mitigate the downside that we are creating a mismatch between pre-training an
 
 #### Next Sequence Prediction
 
-Specifically, when choosing the sentences A and B for each pre- training example, 50% of the time B is the actual next sentence that follows A (labeled as IsNext), and 50% of the time it is a random sentence from the corpus (labeled as NotNext). 
+Specifically, when choosing the sentences A and B for each pre-training example, 50% of the time B is the actual next sentence that follows A (labeled as IsNext), and 50% of the time it is a random sentence from the corpus (labeled as NotNext). 
 
 - Input: [CLS] the man went to [MASK] stores [SEP] he bought a gallon [MASK] milk [SEP]
   Output: IsNext
 - Input: [CLS] the man went to [MASK] stores [SEP] penguin [MASK] are flight ##less birds [SEP]
   Output: NotNext
 
-[CLS] : Classification results
-[SEP] : Boundary of two sentences
+**[CLS]** : Classification results
+**[SEP]** : Boundary of two sentences
 
 **Judge the sentence pair:** Sentence pair → BERT model → [CLS] → Linear-Binary Classifier → 0 or 1
 
@@ -133,11 +133,21 @@ BERT use self-attention machanism to catch the bidirectional cross attention bet
   - **Sentiment / Document Classification** : Fine-tune BERT → [CLS] → Linear classifier(Trained from scratch) → Class
   - **Tagging / Slot filling** : Character → Fine-tune BERT → Linear Classifier → Class
   - **Nature Language Inference** : Sentence pair → Fine-tune BERT → Linear Classifier → Class [T/F/UNK]
-  - **Extraction-Based QA** : Document(s) and Question(e) (s and e learned from scratch)→ Fine-tune BERT → Document representaion {$d_0, ... d_n$} → s and e dot product with $d_i$ → Answer {$d_s, ... d_e$} if s == e : No answer
+  - **Extraction-Based QA** : Document(s) and Question(e) (s and e learned from scratch)→ Fine-tune BERT → Document representaion {$d_0, ... d_n$} → s and e dot product with $d_i$ → Answer {$d_s, ... d_e$} if s != e else : No answer
 
 ## GPT
 
+Generative Pre-Training : Transformer Decoder : self-attention generate model.
+
 ## ELMO
+
+Embedding from Language Model
+
+Bidirectional-RNN-Based LM : Predict next token
+
+Embedding : $ h = \alpha_1 h_1 + \alpha_2 h_2$
+
+$\alpha_1, \alpha_2$ learned with the down stream tasks.
 
 ![bert-elmo-gpt](DL_Img/notes5/bert-gpt-elmo.png)
 
