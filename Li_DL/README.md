@@ -16,4 +16,6 @@
 
 #### [HW.2 Classification](HW_2/hw2.ipynb)
 
-#### []
+#### [HW.3 CNN](HW_3/hw3.ipynb)
+
+#### [HW.4 RNN](HW_4/hw4.ipynb)
