@@ -202,13 +202,13 @@ $K$的选择：Elbow Method，找cost曲线的明显拐点，但不常用。
 
 **PCA 与 线性回归的区别：**
 
-线性回归:计算的是垂直距离，用给定的$x$预测$y_pre$。
+线性回归:计算的是垂直距离，用给定的$x$预测$y_{pre}$。
 
 PCA:计算的是投影距离，最短正交距离。在计算时不考虑$y$的影响。
 
 PCA要保证降维后，数据的特征损失最小。
 
-PCA在对数据进行降为处理时，会计算新求出的主元向量的重要性，最大程度的保持了原有数据信息。且结果只与数据相关，与用户独立。
+PCA在对数据进行降维处理时，会计算新求出的主元向量的重要性，最大程度的保持了原有数据信息。且结果只与数据相关，与用户独立。
 
 #### 12.4 主成分分析算法
 
@@ -217,8 +217,7 @@ PCA : $n → k$
 1. 数据预处理：对数据进行特征缩放和均值标准化（归一化）
 2. 计算**协方差矩阵（covariance matrix）**
     $\sum=\dfrac {1}{m}\sum^{m}_{i=1}\left( x^{(i)}\right) \left( x^{(i)}\right) ^{T}$
-3. 计算协方差的特征向量**特征向量（eigenvectors）**
-   可使用**奇异值分解（singular value decomposition）** 计算
+3. 计算协方差的**特征向量（eigenvectors）**,可使用**奇异值分解（singular value decomposition）** 计算
 
 ![svd](Img/PCA-SVD.png)
 
@@ -236,13 +235,14 @@ PCA : $n → k$
 
 ![SVD-S](Img/PCA-SVD-S.jpg)
 
-$\dfrac {\dfrac {1}{m}\sum^{m}_{i=1}\left| x^{(i) }-x^{(i)}_{approx}\right| ^{2}}{\dfrac {1}{m}\sum^{m}_{i=1}\left| x^{(i)}\right| ^{2}}=1-\dfrac {\Sigma^{k}_{i=1}S_{ii}}{\Sigma^{m}_{i=1}S{ii}}\leq 1$
+$\frac {\frac {1}{m}\sum^{m}_{i=1}\left| x^{(i) }-x^{(i)}_{approx}\right| ^{2}}{\frac{1}{m}\sum^{m}_{i=1}\left| x^{(i)}\right| ^{2}}=1- \frac {\Sigma^{k}_{i=1} S_{ii}}{\Sigma^{m}_{i=1} S_{ii}}\leq 1$
 
 #### 12.6 重建的压缩表示
 
 ![PCA-reconstruction](Img/PCA-rec.png)
 
 压缩后的变量：$z=U^{T}_{reduce}x$
+
 相反的方程为：$x_{appox}=U_{reduce}\cdot z,x_{appox}\approx x$
 
 与原始数据存在偏差，这个过程为重建原始数据。
@@ -251,7 +251,7 @@ $\dfrac {\dfrac {1}{m}\sum^{m}_{i=1}\left| x^{(i) }-x^{(i)}_{approx}\right| ^{2}
 
 运用主成分分析时，将$U_{reduce}$作为学习的参数在训练集上训练得到，在交叉验证集和测试集，同样使用训练集上得到的$U_{reduce}$，而不重新训练。
 
-PCA虽然可以降低特征维度，但**不能用于减少过拟合**。主成分分析只是近似的丢弃一些特征，不考虑任何和结果相关的信心，因此可能会丢失重要信息。
+PCA虽然可以降低特征维度，但**不能用于减少过拟合**。主成分分析只是近似的丢弃一些特征，不考虑任何和结果相关的信息，因此可能会丢失重要信息。
 
 **在构建机器学习系统时，最好是从所有原始特征开始，只在必要时（算法运行太慢或占用太多内存时）才考虑使用PCA。**
 
