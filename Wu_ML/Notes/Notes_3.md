@@ -208,7 +208,7 @@ PCA:计算的是投影距离，最短正交距离。在计算时不考虑$y$的�
 
 PCA要保证降维后，数据的特征损失最小。
 
-PCA在对数据进行降为处理时，会计算新求出的主元响亮的重要性，最大程度的保持了原有数据信息。且结果只与数据相关，与用户独立。
+PCA在对数据进行降为处理时，会计算新求出的主元向量的重要性，最大程度的保持了原有数据信息。且结果只与数据相关，与用户独立。
 
 #### 12.4 主成分分析算法
 
@@ -236,7 +236,7 @@ PCA : $n → k$
 
 ![SVD-S](Img/PCA-SVD-S.jpg)
 
-$\dfrac {\dfrac {1}{m}\sum^{m}_{i=1}\left| x^{(i) }-x^{(i)}_{approx}\right| ^{2}}{\dfrac {1}{m}\sum^{m}_{i=1}\left| x^{(i)}\right| ^{2}}=1-\dfrac {\Sigma^{k}_{i=1}S_{ii}}{\Sigma^{m}_{i=1}S{ii}}\leq 1%$
+$\dfrac {\dfrac {1}{m}\sum^{m}_{i=1}\left| x^{(i) }-x^{(i)}_{approx}\right| ^{2}}{\dfrac {1}{m}\sum^{m}_{i=1}\left| x^{(i)}\right| ^{2}}=1-\dfrac {\Sigma^{k}_{i=1}S_{ii}}{\Sigma^{m}_{i=1}S{ii}}\leq 1$
 
 #### 12.6 重建的压缩表示
 
