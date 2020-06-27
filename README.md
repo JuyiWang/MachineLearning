@@ -1,5 +1,10 @@
-# Machine-learns-me
+# 机器学习笔记
 
-Machine learning
+## Machine Learning 
 
-吴恩达机器学习笔记
+吴恩达-机器学习课程
+
+## Deep Learning
+
+李宏毅-深度学习2019
+
