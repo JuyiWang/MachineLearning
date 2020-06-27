@@ -8,3 +8,8 @@
 
 李宏毅-深度学习2019
 
+## Additional Resources
+
+1. 《机器学习》
+2. 《Deep Learning》
+3. 《统计学习方法》
