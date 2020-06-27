@@ -4,13 +4,13 @@
 
 #### 14.1 问题形式化
 
-![recommend](Img/../../../Img/Recommend-example.png)
+![recommend](Img/Recommend-example.png)
 
 根据用户的评分，以及电影特征预测客户喜好。
 
 #### 14.2 基于内容的推荐系统
 
-![recommend-data](Img/../../../Img/Recommend-data.png)
+![recommend-data](Img/Recommend-data.png)
 
 $\theta^{(j)}$用户$j$的参数向量
 
@@ -97,7 +97,7 @@ $$
 
 #### 14.4 向量化：低秩矩阵分解
 
-![juzhenfenjie](Img/../../../Img/Recommend-diyi.png)
+![juzhenfenjie](Img/Recommend-diyi.png)
 
 通过计算电影 $i$ 与电影 $j$特征向量 $x^{(i)}$ 与 $x^{(j)}$ 的相似度，即进行用户电影推荐。 
 
@@ -105,11 +105,11 @@ $$
 
 对于一个给定的新用户：
 
-![new](Img/../../../Img/Recommend-new.png)
+![new](Img/Recommend-new.png)
 
 需要对结果 $Y$ 矩阵进行均值归一化处理，将每一个用户对某一部电影的评分减去所有用户对该电影的平均值。
 
-![normalized](Img/../../../Img/Recommand-nor.png)
+![normalized](Img/Recommand-nor.png)
 
 利用新的 $Y$ 训练算法，用新训练的算法来预测评分，需要将平均值重新加回，预测$(\theta^{(j)})^T x^{(i)}+\mu_i$。以均值作为新用户的参数。
 
@@ -119,7 +119,7 @@ $$
 
 对于一个非常大的训练集，每次迭代的代价非常大。可以通过国绘制学习曲线，判断是否有必要用非常大的数据集。
 
-![big-data](Img/../../../Img/Big-data-1.png)
+![big-data](Img/Big-data-1.png)
 
 #### 15.2 随机梯度下降法
 
@@ -131,7 +131,7 @@ $cost(\theta,(x^{(i)},y^{(i)})) = \frac{1}{2}(h_\theta(x^{(i)}) - y^{(i)})^2$
 
 随机梯度下降算法：
 
-![big-data](Img/../../../Img/Big-data-SGD.png)
+![big-data](Img/Big-data-SGD.png)
 
 梯度下降算法会在最小值附近徘徊，得到的不是全局最小值而是其近似值。
 
@@ -139,7 +139,7 @@ $cost(\theta,(x^{(i)},y^{(i)})) = \frac{1}{2}(h_\theta(x^{(i)}) - y^{(i)})^2$
 
 **Mini-Batch Gradient Descent**
 
-![big-data](Img/../../../Img/Big-data-BGD.png)
+![big-data](Img/Big-data-BGD.png)
 
 随机梯度下降和梯度下降的折中，$b$的通常选择为2-100。
 
@@ -149,7 +149,7 @@ $cost(\theta,(x^{(i)},y^{(i)})) = \frac{1}{2}(h_\theta(x^{(i)}) - y^{(i)})^2$
 
 对一定批量的代价，计算平均值后绘制图表，通过曲线判断随机梯度下降算法是否正常工作：
 
-![big-data](Img/../../../Img/Big-data-SGD-c.png)
+![big-data](Img/Big-data-SGD-c.png)
 
 可通过减少学习率达到更好的效果，但一般不需要这么做。
 
@@ -159,7 +159,7 @@ $cost(\theta,(x^{(i)},y^{(i)})) = \frac{1}{2}(h_\theta(x^{(i)}) - y^{(i)})^2$
 
 #### 15.6 映射化简和数据并行
 
-![Map-reduce](Img/../../../Img/Big-data-Map-reduce.png)
+![Map-reduce](Img/Big-data-Map-reduce.png)
 
 **分布式？**
 
@@ -175,11 +175,11 @@ $cost(\theta,(x^{(i)},y^{(i)})) = \frac{1}{2}(h_\theta(x^{(i)}) - y^{(i)})^2$
 2. 字符切分（Character segmentation）——将文字分割成一个个单一的字符
 3. 字符分类（Character classification）——确定每一个字符是什么
 
-![OCR](Img/../../../Img/OCR-pipeline.png)
+![OCR](Img/OCR-pipeline.png)
 
 #### 16.2 滑动窗口
 
-![ocr](Img/../../../Img/OCR-windows.png)
+![ocr](Img/OCR-windows.png)
 
 #### 16.3 获取大量数据和人工数据
 
@@ -193,10 +193,10 @@ $cost(\theta,(x^{(i)},y^{(i)})) = \frac{1}{2}(h_\theta(x^{(i)}) - y^{(i)})^2$
 2. 在1的前提下，字符切分准确率100%
 3. 在2的前提下，字符分类准确率100%
 
-![OCR](Img/../../../Img/OCR-next.png)
+![OCR](Img/OCR-next.png)
 
 选择优化提升上限最大的部分。
 
 ### 十七、总结(Conclusion)
 
-![Summary](Img/../../../Img/Summary.png)
+![Summary](Img/Summary.png)
