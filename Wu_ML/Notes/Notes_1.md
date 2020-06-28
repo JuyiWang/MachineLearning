@@ -117,7 +117,9 @@ $x_j^{(i)}$ 代表特征矩阵中的代表特征矩阵中第 $i$ 行的第 $j$ �
 
 ![mormalize](Img/normalize.png)
 
-最简单的方法Mean normalization：${{x}_{n}}=\frac{{{x}_{n}}-{{\mu}_{n}}}{{{s}_{n}}},(n > 0)$
+最简单的方法Mean normalization：
+
+${{x}_{n}}=\frac{{{x}_{n}}-{{\mu}_{n}}}{{{s}_{n}}},(n > 0)$
 
 梯度下降调试Debugging：如何判断梯度下降正确工作。
 
