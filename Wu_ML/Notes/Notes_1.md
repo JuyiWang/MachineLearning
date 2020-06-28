@@ -4,7 +4,7 @@
 
 #### 1.1 机器学习
 
-Tom Mitchell :一个计算机程序能够从经验E中，解决任务T，达到性能度量P。有了经验E，经过度量P评判，程序在处理任务T的时候表现提升。
+Tom Mitchell :一个计算机程序能够从经验**E**中，解决任务**T**，达到性能度量**P**。有了经验**E**，经过度量**P**评判，程序在处理任务**T**的时候表现提升。
 
 算法分类：监督学习、无监督学习、强化学习、推荐系统等。
 
@@ -28,7 +28,7 @@ Tom Mitchell :一个计算机程序能够从经验E中，解决任务T，达到�
 
 ![hypothesis](Img/Hypothesis.png)
 
-学习算法( Learning Algorithm )的作用：根据给定的训练集，输出一个假设函数( Hypothesis function : $h$ )。假设函数实际是输入$x$与输出标签$y$之间的函数映射。$h$根据输入的$x$计算$y$。
+学习算法( Learning Algorithm )的作用：根据给定的训练集，输出一个假设函数( Hypothesis function : $h$ )。假设函数实际是输入 $x$ 与输出标签 $y$ 之间的函数映射。$h$ 根据输入的$x$计算$y$。
 
 单变量线性回归假设函数：$h_\theta(x) = \theta_0 + \theta_1x$。对于给定的$\theta$，$h_\theta(x)$为$x$的函数。
 
@@ -36,7 +36,7 @@ Tom Mitchell :一个计算机程序能够从经验E中，解决任务T，达到�
 
 #### 2.2 代价函数
 
-代价函数（Cost Function）：如何去选择$\theta$？
+代价函数（Cost Function）：如何去选择 $\theta$ ？
 
 针对房价预测问题，模型所预测的值与训练集中实际值之间的差距（下图中蓝线所指）就是建模误差（modeling error）。
 
@@ -52,12 +52,12 @@ $minimize_{\theta_0,\theta_1}J(\theta_0,\theta_1)$
 
 #### 2.3 梯度下降
 
-针对已经获得的代价函数$J(\theta_0,\theta_1)$,希望得到使其取得最小值的参数$\theta_0$，$\theta_1$。
+针对已经获得的代价函数 $J(\theta_0,\theta_1)$,希望得到使其取得最小值的参数 $\theta_0$，$\theta_1$ 。
 
 **操作步骤：**
 
-1. 设置初始$\theta_0$、$\theta_1$,计算$J(\theta)$
-2. 在达到所设阈值前改变$\theta_0$、$\theta_1$减小$J(\theta)$的值。
+1. 设置初始 $\theta_0$、$\theta_1$,计算 $J(\theta)$
+2. 在达到所设阈值前改变 $\theta_0$、$\theta_1$ 减小 $J(\theta)$的值。
    
 梯度下降算法每次找到的都是局部最优解，取决于初始参数组合，不一定为全局最优解。
 
@@ -67,13 +67,13 @@ $minimize_{\theta_0,\theta_1}J(\theta_0,\theta_1)$
 
 ![Batch Gradient Descent](Img/GD-2.png)
 
-$\alpha$是学习率（Learning rate），决定沿着能让代价函数下降程度最大的方向向下迈出的step有多大。
+$\alpha$ 是学习率（Learning rate），决定沿着能让代价函数下降程度最大的方向向下迈出的step有多大。
 
-如果学习率$\alpha$过小，那么梯度更新会非常缓慢。如果学习率$\alpha$过大，可能会越过最低点，导致无法收敛甚至发散。每一步参数都更接近最低点，代价函数的导数也逐渐减小，最小值时为0，因此即便$\alpha$不变也可以收敛至最小值。
+如果学习率 $\alpha$ 过小，那么梯度更新会非常缓慢。如果学习率 $\alpha$ 过大，可能会越过最低点，导致无法收敛甚至发散。每一步参数都更接近最低点，代价函数的导数也逐渐减小，最小值时为0，因此即便 $\alpha$ 不变也可以收敛至最小值。
 
 ![Gradient descent](Img/GD-3.png)
 
-在批量梯度下降中，每一次都同时让所有的参数减去学习速率乘以代价函数的导数。在梯度更新过程中，所有的参数必须同时更新，每一步计算的$J(\theta)$都是关于所有$\theta$的函数，如果异步更新会导致每次计算的$J(\theta)$发生变化。
+在批量梯度下降中，每一次都同时让所有的参数减去学习速率乘以代价函数的导数。在梯度更新过程中，所有的参数必须同时更新，每一步计算的 $J(\theta)$ 都是关于所有 $\theta$ 的函数，如果异步更新会导致每次计算的 $J(\theta)$ 发生变化。
 
 对于单变量线性回归、均方误差代价函数，应用梯度下降算法：
 
@@ -93,15 +93,15 @@ $\alpha$是学习率（Learning rate），决定沿着能让代价函数下降�
 
 ![Multi feature](Img/Multi-feature.png)
 
-$n$代表特征的数量
+$n$ 代表特征的数量
 
-$x^{(i)}$代表第$i$个特征实例，是特征距震中的第$i$行，是一个向量(Vector)
+$x^{(i)}$ 代表第 $i$ 个特征实例，是特征距震中的第$i$行，是一个向量(Vector)
 
-$x_j^{(i)}$代表特征矩阵中的代表特征矩阵中第$i$行的第$j$个特征，也就是第$i$个训练实例的第$j$个特征
+$x_j^{(i)}$ 代表特征矩阵中的代表特征矩阵中第 $i$ 行的第 $j$ 个特征，也就是第 $i$ 个训练实例的第 $j$ 个特征
 
-支持多变量的假设$h$表示为:$h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 + ... + \theta_nx_n$
+支持多变量的假设 $h$ 表示为: $h_\theta(x) = \theta_0 + \theta_1x_1 + \theta_2x_2 + ... + \theta_nx_n$
 
-引入$x_0 = 1$，将假设函数化简为$prediction = datamatrix * parameters$的形式，即为$h_\theta(x) = \theta^TX$。参数是一个n+1维的向量，特征矩阵$X$的维度是 $m∗(n+1)$。
+引入 $x_0 = 1$，将假设函数化简为 $prediction = datamatrix * parameters$ 的形式，即为 $h_\theta(x) = \theta^TX$ 。参数是一个n+1维的向量，特征矩阵$X$的维度是 $m∗(n+1)$。
 
 #### 3.2 多变量梯度下降
 
@@ -109,7 +109,7 @@ $x_j^{(i)}$代表特征矩阵中的代表特征矩阵中第$i$行的第$j$个特
 
 ![M_j](Img/M_j.png)
 
-与单变量线性回归种不同，其中假设函数：$h_\theta(x) = \theta^TX = \theta_0 + \theta_1x_1 + \theta_2x_2 + ... + \theta_nx_n$，参数为$\theta_0,\theta_1,...,\theta_n$。
+与单变量线性回归种不同，其中假设函数：$h_\theta(x) = \theta^TX = \theta_0 + \theta_1x_1 + \theta_2x_2 + ... + \theta_nx_n$，参数为 $\theta_0,\theta_1,...,\theta_n$。
 
 #### 3.3 梯度下降实践
 
@@ -117,22 +117,24 @@ $x_j^{(i)}$代表特征矩阵中的代表特征矩阵中第$i$行的第$j$个特
 
 ![mormalize](Img/normalize.png)
 
-最简单的方法Mean normalization：${{x}_{n}}=\frac{{{x}_{n}}-{{\mu}_{n}}}{{{s}_{n}}},(n > 0)$
+最简单的方法Mean normalization：
+
+${{x}_{n}}=\frac{{{x}_{n}}-{{\mu}_{n}}}{{{s}_{n}}},(n > 0)$
 
 梯度下降调试Debugging：如何判断梯度下降正确工作。
 
-1. 绘制曲线，正常的梯度下降算法，每一次迭代之后$J(\theta)$都应该下降直至收敛。
+1. 绘制曲线，正常的梯度下降算法，每一次迭代之后 $J(\theta)$ 都应该下降直至收敛。
 2. 设置阈值，达到后结束迭代过程。
 
 #### 3.4 正规方程
 
-梯度下降算法外，对于某些线性回归问题，还可以使用正规方程求解$\theta$
+梯度下降算法外，对于某些线性回归问题，还可以使用正规方程求解 $\theta$
 
 ![normalize func](Img/normalizefunc.png)
 
 正规方程求解：$\theta = (X^TX)^{-1}X^Ty$
 
-正规方程求解过程中，可能存在逆矩阵不存在的情况，即$X^TX$为奇异矩阵。通常由于特征之间不独立，例如房价预测中的长、宽与房屋面积；或者是因为特征数量大于训练集数量(删除部分特征或应用正则化regularization)。此时不可以应用正规方程方法。
+正规方程求解过程中，可能存在逆矩阵不存在的情况，即 $X^TX$ 为奇异矩阵。通常由于特征之间不独立，例如房价预测中的长、宽与房屋面积；或者是因为特征数量大于训练集数量(删除部分特征或应用正则化regularization)。此时不可以应用正规方程方法。
 
 ![normalizefunc1](Img/normalfunc1.png)
 
@@ -152,11 +154,11 @@ Sigmoid function与Logistic function为同义词。
 
 ![lr](Img/lr.png)
 
-$h_\theta(x) = \frac{1}{1+\exp^{-\theta^Tx}}$即为假设函数，对于分类问题，$h$的作用是评估在给定$x$的条件下$y=1$的概率。
+$h_\theta(x) = \frac{1}{1+\exp^{-\theta^Tx}}$ 即为假设函数，对于分类问题，$h$的作用是评估在给定$x$的条件下$y=1$的概率。
 
 即：$h_\theta(x) = P(y=1|x;\theta)$
 
-决策界限(Decision boundary)：假设函数的自带属性，取决于$\theta$而不取决于数据集。
+决策界限(Decision boundary)：假设函数的自带属性，取决于 $\theta$ 而不取决于数据集。
 
 #### 4.3 代价函数和梯度下降
 
@@ -172,7 +174,8 @@ $h_\theta(x) = \frac{1}{1+\exp^{-\theta^Tx}}$即为假设函数，对于分类�
 
 ![lgd-1](Img/lgd-1.png)
 
-对于$y$的不同取值，代价函数表现出不同的趋势。简化后的代价函数为：
+对于 $y$ 的不同取值，代价函数表现出不同的趋势。简化后的代价函数为：
+
 $Cost(h_\theta(x),y) = -y*log(h_\theta(x^{(i)}))-(1-y)*log(1-h\theta(x^{(i)}))$
 
 得到假设函数以及代价函数以后就可以应用梯度下降进行最优解$\theta$的求解。
@@ -206,25 +209,25 @@ $Cost(h_\theta(x),y) = -y*log(h_\theta(x^{(i)}))-(1-y)*log(1-h\theta(x^{(i)}))$
 
 #### 5.2 正则化线性回归
 
-正则化Regularzition:损失函数$J(\Theta) = Cost(h_\Theta(x)) + Regularzition$。增加正则化项，在拟合数据的过程中，保证$\Theta$值足够小，简化假设函数。
+正则化Regularzition:损失函数 $J(\Theta) = Cost(h_\Theta(x)) + Regularzition$。增加正则化项，在拟合数据的过程中，保证 $\Theta$ 值足够小，简化假设函数。
 
-正则化线性回归的代价函数，对$\Theta_0$不进行正则化：
+正则化线性回归的代价函数，对 $\Theta_0$ 不进行正则化：
 
 ![regularization](Img/regularization.png)
 
-其中的参数$\lambda$为正则参数，表示对参数的惩罚程度，平衡Cost与正则化项。
+其中的参数 $\lambda$ 为正则参数，表示对参数的惩罚程度，平衡Cost与正则化项。
 
-对于此代价函数应用梯度下降算法，对于每个参数$\theta_j,j > 0$，bias项不参与正则化。
+对于此代价函数应用梯度下降算法，对于每个参数 $\theta_j,j > 0$，bias项不参与正则化。
 
 ![regularization-gd](Img/regulartzation-GD.png)
 
-在原有算法的更新规则的基础上令$\Theta_j$都减少了一个额外的值。
+在原有算法的更新规则的基础上令 $\Theta_j$ 都减少了一个额外的值。
 
 同样可以对正规方程应用正则化：
 
 ![nor-regularization](Img/nor-regularization.png)
 
-图中的矩阵尺寸为$(n+1)*(n+1)$
+图中的矩阵尺寸为 $(n+1)*(n+1)$
 
 #### 5.3 正则化的逻辑回归模型
 
@@ -234,10 +237,10 @@ $Cost(h_\theta(x),y) = -y*log(h_\theta(x^{(i)}))-(1-y)*log(1-h\theta(x^{(i)}))$
 
 ![log-regularization-gd](Img/log-regular-gd.png)
 
-同线性回归表达是相同，但其中的假设函数$h$为$h_\Theta(x) = g(\Theta^TX)$。
+同线性回归表达是相同，但其中的假设函数 $h$ 为 $h_\Theta(x) = g(\Theta^TX)$。
 
 注意：
 
-1. 虽然正则化的逻辑回归中的梯度下降和正则化的线性回归中的表达式看起来一样，但由于两者的$h_\Theta(x)$​不同所以还是有很大差别。
+1. 虽然正则化的逻辑回归中的梯度下降和正则化的线性回归中的表达式看起来一样，但由于两者的 $h_\Theta(x)$​ 不同所以还是有很大差别。
 
-2. $\Theta_0$不参与其中的任何一个正则化。
+2. $\Theta_0$ 不参与其中的任何一个正则化。
