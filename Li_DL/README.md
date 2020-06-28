@@ -6,6 +6,17 @@
 
 ## 学习笔记
 
+**1.Machine Learning ([Notes1](Notes/Notes1_ML.md))**
+
+**2.Deep Learning ([Notes2](Notes/Notes2_DL.md))**
+
+**3.CNN ([Notes3](Notes/Notes3_CNN.md))**
+
+**4.RNN ([Notes4](Notes/Notes4_RNN.md))**
+
+**5.Language Model ([Notes5](Notes/Notes5_LanguageModel.md))**
+
+**7.Adversarial Attack ([Notes7](Notes/Notes7_AdversarialAttack.md))**
 
 ## 代码作业
 
@@ -18,3 +29,4 @@
 #### [HW.3 CNN](HW_3/hw3.ipynb)
 
 #### [HW.4 RNN](HW_4/hw4.ipynb)
+
