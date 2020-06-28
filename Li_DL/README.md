@@ -20,13 +20,41 @@
 
 ## 代码作业
 
-包括李宏毅机器学习课程x次作业
+包括李宏毅机器学习课程5次作业
 
-#### [HW.1 Regreesion](HW_1/hw_1.ipynb)
+#### HW.1 Regreesion
 
-#### [HW.2 Classification](HW_2/hw2.ipynb)
 
-#### [HW.3 CNN](HW_3/hw3.ipynb)
 
-#### [HW.4 RNN](HW_4/hw4.ipynb)
+#### HW.2 Classification
+
+#### HW.3 CNN
+
+#### HW.4 RNN
+
+- **RNN**
+  - **任务说明** : 文本情感分类
+  - **词向量** : Glove and Word2vec
+  - **模型结构** : RNN
+  - **额外机制** 
+    - ***Unsupervised Learning***
+  - **模型效果** 
+    - ***测试损失*** : 3.95812
+    - ***Accuracy*** : 0.24675
+
+#### HW.8 Seq2Seq
+
+- **Seq2Seq**
+  - **任务说明** : 英文翻译中文
+  - **词向量** : Word2vec
+  - **模型结构** : Encoder-Decoder with Attention
+    - ***Encoder*** : Padded Bidirectional LSTM
+    - ***Deocder*** : Bidirectional GRU
+    - ***Attention*** : Query Attention
+  - **额外机制** 
+    - ***Scheduler Sampling*** : ratio 0.6
+    - ***Beam Search*** : 暂无
+  - **模型效果** 
+    - ***测试损失*** : 3.95812
+    - ***Bleu分数*** : 0.24675
 
