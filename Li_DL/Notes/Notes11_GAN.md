@@ -27,7 +27,7 @@ Discriminator tell the Generator where is not good enough.
   - In each training iteration:
     - **Fix Generator G, and update discriminator D**
       - Discriminator learns to assigh high scores to real projects and low scores to generator objects.
-    - **Fix discriminator D, and update Generatro G**
+    - **Fix discriminator D, and update Generator G**
       - Generator learns to "fool" the discriminator
 
 This is where the term **'adversarial'** comes from.
