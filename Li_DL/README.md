@@ -30,6 +30,13 @@
 
 #### HW.3 CNN
 
+- **CNN**
+  - **任务说明** : 食物图片分类
+  - **模型结构** : CNN
+  - **模型效果** 
+    - ***测试损失*** : 
+    - ***Accuracy*** : 
+
 #### HW.4 RNN
 
 - **RNN**
@@ -39,8 +46,8 @@
   - **额外机制** 
     - ***Unsupervised Learning***
   - **模型效果** 
-    - ***测试损失*** : 3.95812
-    - ***Accuracy*** : 0.24675
+    - ***测试损失*** : 
+    - ***Accuracy*** : 
 
 #### HW.8 Seq2Seq
 
@@ -52,9 +59,9 @@
     - ***Deocder*** : Bidirectional GRU
     - ***Attention*** : Query Attention
   - **额外机制** 
-    - ***Scheduler Sampling*** : ratio 0.6
+    - ***Scheduler Sampling*** : ratio 0.5
     - ***Beam Search*** : 暂无
   - **模型效果** 
-    - ***测试损失*** : 3.95812
-    - ***Bleu分数*** : 0.24675
+    - ***测试损失*** : 2.95812
+    - ***Test Bleu*** : 0.27845
 
