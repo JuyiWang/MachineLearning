@@ -61,3 +61,11 @@ Domain-adversarial want both of label predictor and domain classifier performanc
 **What if we don't have database ? Attribute embedding + word embedding.**
 
 ![12_10](DL_Img/notes12/12_10.png)
+
+## Source unlabeled & Target labelled
+
+### Self-taught learning
+
+Learning to extract better representation from the source data(unsupervised approach)
+
+Extracting better representation for target data
