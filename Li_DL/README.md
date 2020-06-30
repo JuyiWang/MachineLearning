@@ -55,13 +55,13 @@
   - **任务说明** : 英文翻译中文
   - **词向量** : Word2vec
   - **模型结构** : Encoder-Decoder with Attention
-    - ***Encoder*** : Padded Bidirectional LSTM
-    - ***Deocder*** : Bidirectional GRU
+    - ***Encoder*** : Padded Bidirectional GRU
+    - ***Deocder*** : GRU
     - ***Attention*** : Query Attention
   - **额外机制** 
     - ***Scheduler Sampling*** : ratio 0.5
     - ***Beam Search*** : 暂无
   - **模型效果** 
-    - ***测试损失*** : 2.95812
-    - ***Test Bleu*** : 0.27845
+    - ***测试损失*** : 1.94268
+    - ***Test Bleu*** : 0.31116
 
