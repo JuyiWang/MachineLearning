@@ -14,17 +14,27 @@
 
 **4.RNN ([Notes4](Notes/Notes4_RNN.md))**
 
-**5.Language Model ([Notes5](Notes/Notes5_LanguageModel.md))**
+**5.Explainable AI ([Notes5](Notes/Notes5_ExplainableAI.md))**
 
-**7.Adversarial Attack ([Notes7](Notes/Notes7_AdversarialAttack.md))**
+**6.Adversarial Attack ([Notes6](Notes/Notes6_AdversarialAttack.md))**
+
+**7.Adversarial Attack ([Notes7](Notes/Notes7_SemiSupervised.md))**
+
+**8.Network Compression ([Notes8](Notes/Notes8_Compression.md))**
+
+**9.Auto-Encoder ([Notes9](Notes/Notes9_AutoEncoder.md))**
+
+**10.Anomaly Detection ([Notes10](Notes/Notes10_AnomalyDetection.md))**
+
+**11.Generative Adversarial Network ([Notes11](Notes/Notes11_GAN.md))**
+
+**12.Transfer Learning ([Notes12](Notes/Notes12_TransferLearning.md))**
 
 ## 代码作业
 
 包括李宏毅机器学习课程5次作业
 
 #### HW.1 Regreesion
-
-
 
 #### HW.2 Classification
 
