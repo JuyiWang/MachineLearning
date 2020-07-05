@@ -53,6 +53,16 @@ Find an special $\Delta x$ that make all inputs wrong .
 
 ![6_11](DL_Img/notes6/6_11.png)
 
+### Passice Defense
+
+**Add a shield : Finding the attacked Image without modifying the model.**
+
 ![6_12](DL_Img/notes6/6_12.png)
 
+### Proactive Defense
+
+**Training a model that is robust to adversarial attack.**
+
 ![6_13](DL_Img/notes6/6_13.png)
+
+**Each iteration will find new vulnerabilities, but defense algorithm A can only work against attack algorithm A, not for attack algorithm B.**
