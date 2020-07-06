@@ -30,6 +30,8 @@
 
 **12.Transfer Learning ([Notes12](Notes/Notes12_TransferLearning.md))**
 
+**13.**
+
 ## 代码作业
 
 包括李宏毅机器学习课程5次作业
@@ -52,7 +54,7 @@
 - **RNN**
   - **任务说明** : 文本情感分类
   - **词向量** : Glove and Word2vec
-  - **模型结构** : RNN
+  - **模型结构** : RNN、Bert、TextCNN
   - **额外机制** 
     - ***Unsupervised Learning***
   - **模型效果** 
@@ -65,7 +67,7 @@
   - **任务说明** : 英文翻译中文
   - **词向量** : Word2vec
   - **模型结构** : Encoder-Decoder with Attention
-    - ***Encoder*** : Padded Bidirectional GRU
+    - ***Encoder*** : Bidirectional GRU
     - ***Deocder*** : GRU
     - ***Attention*** : Query Attention
   - **额外机制** 
