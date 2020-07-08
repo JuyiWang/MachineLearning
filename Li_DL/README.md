@@ -30,7 +30,9 @@
 
 **12.Transfer Learning ([Notes12](Notes/Notes12_TransferLearning.md))**
 
-**13.**
+**13.Meta Learning ([Notes13](Notes/Notes13_MetaLearning.md))**
+
+**14.Life Long Learning ([Notes14](Notes/Notes14_LifeLongLearning.md))**
 
 ## 代码作业
 
