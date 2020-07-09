@@ -47,21 +47,26 @@
 - **CNN**
   - **任务说明** : 食物图片分类
   - **模型结构** : CNN
-  - **模型效果** 
-    - ***测试损失*** : 
-    - ***Accuracy*** : 
+  - **模型效果**  
+    - ***Accuracy*** : 0.801
 
 #### HW.4 RNN
 
 - **RNN**
   - **任务说明** : 文本情感分类
-  - **词向量** : Glove and Word2vec
+  - **词向量** : Glove、 Word2Vec、Random Embedding
   - **模型结构** : RNN、Bert、TextCNN
   - **额外机制** 
     - ***Unsupervised Learning***
   - **模型效果** 
-    - ***测试损失*** : 
-    - ***Accuracy*** : 
+    - Word2Vec
+
+    |Model|Accuarcy|
+    |---|---|
+    |RNN|0.760|
+    |TextCNN|0.765|
+    |Bert|0.845|
+    
 
 #### HW.8 Seq2Seq
 
