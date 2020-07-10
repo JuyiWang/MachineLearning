@@ -18,7 +18,7 @@
 
 **6.Adversarial Attack ([Notes6](Notes/Notes6_AdversarialAttack.md))**
 
-**7.Adversarial Attack ([Notes7](Notes/Notes7_SemiSupervised.md))**
+**7.Rainforce Learning ([Notes7](Notes/Notes7_SemiSupervised.md))**
 
 **8.Network Compression ([Notes8](Notes/Notes8_Compression.md))**
 
