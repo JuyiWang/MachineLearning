@@ -59,7 +59,7 @@
   - **额外机制** 
     - ***Unsupervised Learning***
   - **模型效果** 
-    - Word2Vec
+    - Word2Vec Embedding
 
     |Model|Accuarcy|
     |---|---|
