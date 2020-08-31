@@ -199,7 +199,7 @@ $Cost(h_\theta(x),y) = -y*log(h_\theta(x^{(i)}))-(1-y)*log(1-h\theta(x^{(i)}))$
 
 欠拟合Underfit：没有很好的拟合数据集，具有高偏差high bias。
 
-过拟合Overfit：你和数据集，但无法泛化至新数据，具有高方差high variance。
+过拟合Overfit：拟合数据集，但无法泛化至新数据，具有高方差high variance。
 
 对于过拟合：
 
